@@ -9,6 +9,16 @@ function countDigits(number) {
     console.log(digitCount)
 }
 
+function countDigits(number) {
+    let digitCount = 0
+    const numberStr = number.toString()
+    let i = 0
+    while (i < numberStr.length) {
+    digitCount++
+    i++
+}
+    console.log(digitCount)
+}
 
 
 //2.Count numbers of digit 9 in a number. Use both loops (for, while)
