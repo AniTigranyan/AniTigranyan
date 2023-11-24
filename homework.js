@@ -1,87 +1,54 @@
-//1.Given a number print its digits count. Use both loops (for, while)
-function countDigits(number) {
-    let digitCount = 0
-    const numberStr = number.toString()
+//1.Insert a number. Print “yes” if it contains 3 successive zeros, otherwise print “no”.
 
-    for (let i = 0; i < numberStr.length; i++) {
-        digitCount++
+
+//2.Insert a number. Remove all zeros from the number, except the last one and print the
+//number. If there are at most one zero, print “Nothing to remove”.
+
+//3.Insert a n positive number. Check number is prime or not. Prime numbers are numbers
+//that have only 2 factors: 1 and themselves. For example, the first 5 prime numbers are
+//2, 3, 5, 7, and 11.
+function isPrime(num) {
+    for (let i = 2; i < num; i++){
+        if(num % i === 0) {
+            return false
+        }
     }
-    console.log(digitCount)
-}
-
-function countDigits(number) {
-    let digitCount = 0
-    const numberStr = number.toString()
-    let i = 0
-    while (i < numberStr.length) {
-    digitCount++
-    i++
-}
-    console.log(digitCount)
+    return num > 1
 }
 
 
-//2.Count numbers of digit 9 in a number. Use both loops (for, while)
-function digit9(number) {
-    let numStr = number.toString()
+//4.Insert a n positive number. Print the n-st prime number.
+function IsPrime(number) {
+    for (let i = 2; i < number; i++){
+        if(number % i === 0) {
+            return false
+        }
+    }
+    return number > 1
+}
+
+function FindPrime(n) {
     let count = 0
-    for (let i = 0; i < numStr.length; i++)
-    if (numStr[i] === '9') {
-        count++
-    }
-    console.log(count)
-}
+    let number = 2
 
-function countdigit9(number) {
-    let numStr = number.toString()
-    let count = 0 
-    let i = 0
-    while(i < numStr.length) {
-    if (numStr[i] === '9'){
-    count++
-    }
-    i++
-  }
-    console.log(count)
-}
-
-
-//3.Given two numbers. Print ony odd numbers between that numbers.
-function printOnlyOddNumbers(start, end) 
-{
-    let number = start 
-    while(number <= end) {
-        if (number % 2 !== 0) {
-          console.log(number)
+    while (count < n) {
+        if (IsPrime(number)) {
+            count++
         }
         number++
-    }   
-}
-
-//4.Given a number as input, insert dashes (-) between each two even numbers.
-function InsertDashesBetweenEvens(number) {
-    const numStr = number.toString()
-    let result = numStr[0]
-
-    for(let i = 1; i < numStr.length; i++) {
-        const currentDigit = numStr[i]
-        const prevDigit = numStr[i - 1]
-        
-        if(currentDigit % 2 === 0 && prevDigit % 2 === 0) {
-            result += `-${currentDigit}`
-        } else {
-            result += currentDigit
-        }
     }
-    console.log(result)
+    return number - 1
 }
 
-//5.Given a positive number. Print it in reverse order.
-function reversenumber(number){
-    let reversednumber = 0
-    while (number > 0) {
-        reversednumber =  reversednumber * 10 + number % 10 
-        number = Math.floor(number / 10)
-    }
-    console.log(reversednumber)
+
+
+//5.Insert two positive integers n and m between 1 and 10. Compute and print n^m .
+function print(n,m) {
+    if (n > 1 && n < 10 && m > 1 && m < 10)
+    var result = Math.pow(n,m)
+  console.log(result)
 }
+
+  
+
+  
