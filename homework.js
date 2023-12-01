@@ -1,54 +1,59 @@
-//1.Insert a number. Print “yes” if it contains 3 successive zeros, otherwise print “no”.
+//1.Given a number n (0 ≤ n ≤ 100) you should print the smallest positive number such that
+//its digits product is equal to n.
 
 
-//2.Insert a number. Remove all zeros from the number, except the last one and print the
-//number. If there are at most one zero, print “Nothing to remove”.
-
-//3.Insert a n positive number. Check number is prime or not. Prime numbers are numbers
-//that have only 2 factors: 1 and themselves. For example, the first 5 prime numbers are
-//2, 3, 5, 7, and 11.
-function isPrime(num) {
-    for (let i = 2; i < num; i++){
-        if(num % i === 0) {
-            return false
+//2.Find the biggest common divisor of two inserted numbers.
+function findCommonDivisor(a,b){
+        while (b) {
+            [a, b] = [b, a % b]
         }
-    }
-    return num > 1
+        return a
 }
 
+//3.Given a number. Print all prime factors of the number.
 
-//4.Insert a n positive number. Print the n-st prime number.
-function IsPrime(number) {
-    for (let i = 2; i < number; i++){
-        if(number % i === 0) {
-            return false
+
+//4.Enter a positive number. Calculate and print its factorial. ( n! = n * (n-1) * (n-2) * … * 3 * 2
+//* 1 , 0! = 1 )
+function calculateFactorial(n) {
+    if (n < 0){
+        return false
+    }
+    else if (n === 0 || n === 1){
+        return 1
+    }
+    else {
+        let factorial = 1
+        for (let i = n; i >= 2; i--) {
+            factorial *= i
         }
+        console.log(factroial)
     }
-    return number > 1
 }
 
-function FindPrime(n) {
-    let count = 0
-    let number = 2
 
-    while (count < n) {
-        if (IsPrime(number)) {
-            count++
-        }
-        number++
+
+//5.Given a number n ( n >= 0 ). Print n Fibonacci number.
+function printFibonacciNum(n){
+    let a = 0
+    let b = 1
+    for (let i = 2; i <= n; i++) {
+        let sum = a + b
+        a = b
+        b = sum
     }
-    return number - 1
+    return b 
+    
 }
 
-
-
-//5.Insert two positive integers n and m between 1 and 10. Compute and print n^m .
-function print(n,m) {
-    if (n > 1 && n < 10 && m > 1 && m < 10)
-    var result = Math.pow(n,m)
-  console.log(result)
+//6.Given a number n ( n > 0 ). Print Fibonacci series up to n.
+function printFibonacci(n){
+    a = 0 
+    b = 1
+    while (a + b <= n) {
+        let sum = a + b;
+        console.log(sum);
+        a = b;
+        b = sum;
+    }
 }
-
-  
-
-  
