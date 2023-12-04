@@ -2,13 +2,8 @@
 //its digits product is equal to n.
 
 
+
 //2.Find the biggest common divisor of two inserted numbers.
-function findCommonDivisor(a,b){
-        while (b) {
-            [a, b] = [b, a % b]
-        }
-        return a
-}
 
 //3.Given a number. Print all prime factors of the number.
 
