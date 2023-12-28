@@ -1,5 +1,13 @@
 //Implement following array methods
 //find 
+function find(array, callback) {
+    for (let i = 0; i < array.length; i++) {
+      if (callback(array[i], i, array)) {
+        return array[i];
+      }
+    }
+    return undefined;
+  }
 
 //filter 
 function filter(array, callback) {
@@ -29,14 +37,6 @@ function some(array, callback){
  }
 
  //every
- function every(array,callback){
-    for(let i = 0; i < array.length; i++){
-        if (!callback(array[i], i, array)) {
-            return false
-        }
-    }
-        return true
-}
 
 //map
 function map(array,callback){
